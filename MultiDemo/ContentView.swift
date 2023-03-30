@@ -8,84 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject var demoData : DemoData = DemoData()
-    let speedsetting = SpeedSetting()
-    
-    let myHStack = HStack {
-        Text("MyHStack")
-        Image(systemName: "globe")
-    }
-    
-    struct WifiImageView: View {
-        @Binding var wifiEnabled : Bool
-        var body: some View {
-            Image(systemName: wifiEnabled ? "wifi" : "wifi.slash")
-        }
-    }
-    
+    @State private var rotation: Double = 0
+
     var body: some View {
         VStack {
-            Group {
-                SpeedControlView()
-                SpeedDisplayView()
-                Toggle(isOn: $demoData.wifiEnabled) {
-                    Text("Enable Wi-Fi")
-                }
-                WifiImageView(wifiEnabled: $demoData.wifiEnabled)
-                TextField("Enter user name", text: $demoData.currentUser)
-                    .modifier(StandardTitle())
-                Text("Hello \(demoData.currentUser)")
-                Text("\(demoData.currentUser), you are user number \(demoData.userCount)")
-                myHStack
-                Text("sample")
-                    .padding()
-                    .border(.green)
-            }
-            Group {
-                Label(
-                    title: {
-                        Text("Label with Icon")
-                            .font(.largeTitle)
-                    },
-                    icon: {
-                        Circle()
-                            .fill(.blue)
-                            .frame(width: 25, height: 25)
-                    }
-                )
-                Button( action: buttonPressed ) {
-                    Image(systemName: "square.and.arrow.down")
-                }
-            }
-        }.environmentObject(speedsetting)
-    }
-    
-    func buttonPressed() {
-        print("Button pressed")
-    }
-}
+            Text("Starting second exercise")
+                .font(.largeTitle)
+                .fontWeight(.heavy)
+                .rotationEffect(.degrees(rotation))
+                .animation(.easeOut(duration: 5), value: rotation)
+            Slider(value: $rotation, in: 0...360, step: 0.1)
+        }
 
-struct SpeedControlView: View {
-    @EnvironmentObject var speedsetting: SpeedSetting
-    var body: some View {
-        Slider(value: $speedsetting.speed, in: 0...100)
-    }
-}
-
-struct SpeedDisplayView: View {
-    @EnvironmentObject var speedsetting: SpeedSetting
-    var body: some View {
-        Text("Speed = \(speedsetting.speed)")
-    }
-}
-
-struct StandardTitle: ViewModifier {
-    func body(content: Content) -> some View {
-        content
-            .font(.largeTitle)
-            .background(Color.white)
-            .border(Color.gray, width: 0.2)
-            .shadow(color: Color.black, radius: 5, x: 0, y: 5)
     }
 }
 

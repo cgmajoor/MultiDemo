@@ -10,6 +10,4 @@ import Combine
 
 class SpeedSetting: ObservableObject {
     @Published var speed = 0.0
-
-   
 }

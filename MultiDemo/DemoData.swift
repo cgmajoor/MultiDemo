@@ -12,11 +12,11 @@ class DemoData : ObservableObject {
     @Published var userCount = 42
     @Published var currentUser = ""
     @Published var wifiEnabled: Bool = true
-
+    
     init() {
         updateData()
     }
-
+    
     func updateData() {
         print("userdata")
     }

@@ -13,6 +13,7 @@
 		F2AC9B6E29D57B3800B7445A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2AC9B6D29D57B3800B7445A /* Preview Assets.xcassets */; };
 		F2D026DE29D5B16C00640A47 /* DemoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D026DD29D5B16C00640A47 /* DemoData.swift */; };
 		F2D026E029D5B72600640A47 /* SpeedSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D026DF29D5B72600640A47 /* SpeedSetting.swift */; };
+		F2D026E429D5C13F00640A47 /* FirstExamplesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D026E329D5C13F00640A47 /* FirstExamplesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		F2AC9B6D29D57B3800B7445A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F2D026DD29D5B16C00640A47 /* DemoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoData.swift; sourceTree = "<group>"; };
 		F2D026DF29D5B72600640A47 /* SpeedSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedSetting.swift; sourceTree = "<group>"; };
+		F2D026E329D5C13F00640A47 /* FirstExamplesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstExamplesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				F2AC9B6C29D57B3800B7445A /* Preview Content */,
 				F2D026DD29D5B16C00640A47 /* DemoData.swift */,
 				F2D026DF29D5B72600640A47 /* SpeedSetting.swift */,
+				F2D026E329D5C13F00640A47 /* FirstExamplesView.swift */,
 			);
 			path = MultiDemo;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 				F2D026E029D5B72600640A47 /* SpeedSetting.swift in Sources */,
 				F2D026DE29D5B16C00640A47 /* DemoData.swift in Sources */,
 				F2AC9B6829D57B3600B7445A /* ContentView.swift in Sources */,
+				F2D026E429D5C13F00640A47 /* FirstExamplesView.swift in Sources */,
 				F2AC9B6629D57B3600B7445A /* MultiDemoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
