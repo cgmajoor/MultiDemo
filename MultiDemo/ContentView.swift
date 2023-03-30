@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var wifiEnabled = true
-    @State private var userName = ""
+    
+    @ObservedObject var demoData : DemoData = DemoData()
 
     let myHStack = HStack {
         Text("MyHStack")
         Image(systemName: "globe")
     }
+
     struct WifiImageView: View {
         @Binding var wifiEnabled : Bool
         var body: some View {
@@ -24,13 +25,14 @@ struct ContentView: View {
 
     var body: some View {
         VStack {
-            Toggle(isOn: $wifiEnabled) {
+            Toggle(isOn: $demoData.wifiEnabled) {
                 Text("Enable Wi-Fi")
             }
-            WifiImageView(wifiEnabled: $wifiEnabled)
-            TextField("Enter user name", text: $userName)
+            WifiImageView(wifiEnabled: $demoData.wifiEnabled)
+            TextField("Enter user name", text: $demoData.currentUser)
                 .modifier(StandardTitle())
-            Text("Hello \(userName)")
+            Text("Hello \(demoData.currentUser)")
+            Text("\(demoData.currentUser), you are user number \(demoData.userCount)")
             myHStack
             Text("sample")
                 .padding()
