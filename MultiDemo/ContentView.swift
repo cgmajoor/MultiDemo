@@ -8,19 +8,26 @@
 import SwiftUI
 
 struct ContentView: View {
+
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Text("SwiftUI demo")
+            Text("Bordered Text")
+                .border(.green)
         }
-        .padding()
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        Group {
+            ContentView()
+                .previewDevice("iPhone 11")
+                .previewDisplayName("iPhone 11")
+            ContentView()
+                .previewDevice("iPhone SE (2nd generation)")
+                .previewDisplayName("iPhone SE")
+                .environment(\.colorScheme, .dark)
+        }
     }
 }
