@@ -22,6 +22,17 @@ struct ContentView: View {
             Text("sample")
                 .padding()
                 .border(.green)
+            Label(
+                title: {
+                    Text("Label with Icon")
+                        .font(.largeTitle)
+                },
+                icon: {
+                    Circle()
+                        .fill(.blue)
+                        .frame(width: 25, height: 25)
+                }
+            )
             Button( action: buttonPressed ) {
                 Image(systemName: "square.and.arrow.down")
             }
