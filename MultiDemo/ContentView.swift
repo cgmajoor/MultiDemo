@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @ObservedObject var demoData : DemoData = DemoData()
+    @StateObject var demoData : DemoData = DemoData()
 
     let myHStack = HStack {
         Text("MyHStack")
