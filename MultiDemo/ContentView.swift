@@ -22,7 +22,14 @@ struct ContentView: View {
             Text("sample")
                 .padding()
                 .border(.green)
+            Button( action: buttonPressed ) {
+                Image(systemName: "square.and.arrow.down")
+            }
         }
+    }
+
+    func buttonPressed() {
+        print("Button pressed")
     }
 }
 
