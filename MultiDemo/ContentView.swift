@@ -8,16 +8,29 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var wifiEnabled = true
+    @State private var userName = ""
 
     let myHStack = HStack {
         Text("MyHStack")
         Image(systemName: "globe")
     }
+    struct WifiImageView: View {
+        @Binding var wifiEnabled : Bool
+        var body: some View {
+            Image(systemName: wifiEnabled ? "wifi" : "wifi.slash")
+        }
+    }
 
     var body: some View {
         VStack {
-            Text("SwiftUI demo")
+            Toggle(isOn: $wifiEnabled) {
+                Text("Enable Wi-Fi")
+            }
+            WifiImageView(wifiEnabled: $wifiEnabled)
+            TextField("Enter user name", text: $userName)
                 .modifier(StandardTitle())
+            Text("Hello \(userName)")
             myHStack
             Text("sample")
                 .padding()
