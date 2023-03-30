@@ -9,7 +9,13 @@ import SwiftUI
 
 struct FirstTabView: View {
     var body: some View {
-        Text("FirstTabView")
+        Text("View One")
+            .onAppear(perform: {
+                print("onAppear triggered")
+            })
+            .onDisappear(perform: {
+                print("onDisappeared triggered")
+            })
     }
 }
 
