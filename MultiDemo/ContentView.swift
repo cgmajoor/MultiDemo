@@ -9,12 +9,30 @@ import SwiftUI
 
 struct ContentView: View {
 
+    let myHStack = HStack {
+        Text("MyHStack")
+        Image(systemName: "globe")
+    }
+
     var body: some View {
         VStack {
             Text("SwiftUI demo")
-            Text("Bordered Text")
+                .modifier(StandardTitle())
+            myHStack
+            Text("sample")
+                .padding()
                 .border(.green)
         }
+    }
+}
+
+struct StandardTitle: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.largeTitle)
+            .background(Color.white)
+            .border(Color.gray, width: 0.2)
+            .shadow(color: Color.black, radius: 5, x: 0, y: 5)
     }
 }
 
