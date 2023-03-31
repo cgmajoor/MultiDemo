@@ -17,6 +17,6 @@ struct AppStorageReaderView: View {
 
 struct AppStorageReaderView_Previews: PreviewProvider {
     static var previews: some View {
-        SceneStorageView()
+        AppStorageReaderView()
     }
 }

@@ -11,6 +11,10 @@
 		F29ED24629D6CC2500E3EBCC /* SceneStorageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29ED24529D6CC2500E3EBCC /* SceneStorageView.swift */; };
 		F29ED24829D6CC2F00E3EBCC /* AppStorageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29ED24729D6CC2F00E3EBCC /* AppStorageView.swift */; };
 		F29ED24F29D6D1CE00E3EBCC /* AppStorageReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29ED24E29D6D1CE00E3EBCC /* AppStorageReaderView.swift */; };
+		F29ED25129D6D32A00E3EBCC /* AppStorageCustomDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29ED25029D6D32A00E3EBCC /* AppStorageCustomDataView.swift */; };
+		F29ED25529D6D50200E3EBCC /* UserName.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29ED25429D6D50200E3EBCC /* UserName.swift */; };
+		F29ED25729D6D7DA00E3EBCC /* AppStorageCustomDataReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29ED25629D6D7DA00E3EBCC /* AppStorageCustomDataReaderView.swift */; };
+		F29ED25929D6D91A00E3EBCC /* UserStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29ED25829D6D91A00E3EBCC /* UserStorage.swift */; };
 		F2AC9B6629D57B3600B7445A /* MultiDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AC9B6529D57B3600B7445A /* MultiDemoApp.swift */; };
 		F2AC9B6829D57B3600B7445A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AC9B6729D57B3600B7445A /* ContentView.swift */; };
 		F2AC9B6A29D57B3800B7445A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2AC9B6929D57B3800B7445A /* Assets.xcassets */; };
@@ -29,6 +33,10 @@
 		F29ED24529D6CC2500E3EBCC /* SceneStorageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneStorageView.swift; sourceTree = "<group>"; };
 		F29ED24729D6CC2F00E3EBCC /* AppStorageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorageView.swift; sourceTree = "<group>"; };
 		F29ED24E29D6D1CE00E3EBCC /* AppStorageReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorageReaderView.swift; sourceTree = "<group>"; };
+		F29ED25029D6D32A00E3EBCC /* AppStorageCustomDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorageCustomDataView.swift; sourceTree = "<group>"; };
+		F29ED25429D6D50200E3EBCC /* UserName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserName.swift; sourceTree = "<group>"; };
+		F29ED25629D6D7DA00E3EBCC /* AppStorageCustomDataReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorageCustomDataReaderView.swift; sourceTree = "<group>"; };
+		F29ED25829D6D91A00E3EBCC /* UserStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStorage.swift; sourceTree = "<group>"; };
 		F2AC9B6229D57B3600B7445A /* MultiDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultiDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2AC9B6529D57B3600B7445A /* MultiDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiDemoApp.swift; sourceTree = "<group>"; };
 		F2AC9B6729D57B3600B7445A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -58,9 +66,9 @@
 		F29ED24929D6CC4A00E3EBCC /* Example1 */ = {
 			isa = PBXGroup;
 			children = (
+				F2D026E329D5C13F00640A47 /* FirstExamplesView.swift */,
 				F2D026DD29D5B16C00640A47 /* DemoData.swift */,
 				F2D026DF29D5B72600640A47 /* SpeedSetting.swift */,
-				F2D026E329D5C13F00640A47 /* FirstExamplesView.swift */,
 			);
 			path = Example1;
 			sourceTree = "<group>";
@@ -87,9 +95,9 @@
 		F29ED24C29D6CC7E00E3EBCC /* Example3 */ = {
 			isa = PBXGroup;
 			children = (
+				F2DE36E129D5F43200920935 /* ThirdExampleView.swift */,
 				F2D026E729D5CD0200640A47 /* FirstTabView.swift */,
 				F2D026E929D5CD1600640A47 /* SecondTabView.swift */,
-				F2DE36E129D5F43200920935 /* ThirdExampleView.swift */,
 			);
 			path = Example3;
 			sourceTree = "<group>";
@@ -101,6 +109,10 @@
 				F29ED24529D6CC2500E3EBCC /* SceneStorageView.swift */,
 				F29ED24729D6CC2F00E3EBCC /* AppStorageView.swift */,
 				F29ED24E29D6D1CE00E3EBCC /* AppStorageReaderView.swift */,
+				F29ED25429D6D50200E3EBCC /* UserName.swift */,
+				F29ED25029D6D32A00E3EBCC /* AppStorageCustomDataView.swift */,
+				F29ED25629D6D7DA00E3EBCC /* AppStorageCustomDataReaderView.swift */,
+				F29ED25829D6D91A00E3EBCC /* UserStorage.swift */,
 			);
 			path = Example4;
 			sourceTree = "<group>";
@@ -215,10 +227,14 @@
 				F29ED24829D6CC2F00E3EBCC /* AppStorageView.swift in Sources */,
 				F2D026E029D5B72600640A47 /* SpeedSetting.swift in Sources */,
 				F2D026E629D5CCA000640A47 /* SecondExampleView.swift in Sources */,
+				F29ED25129D6D32A00E3EBCC /* AppStorageCustomDataView.swift in Sources */,
 				F2D026DE29D5B16C00640A47 /* DemoData.swift in Sources */,
 				F29ED24429D6CA2900E3EBCC /* FourthExampleView.swift in Sources */,
 				F29ED24F29D6D1CE00E3EBCC /* AppStorageReaderView.swift in Sources */,
 				F2AC9B6829D57B3600B7445A /* ContentView.swift in Sources */,
+				F29ED25729D6D7DA00E3EBCC /* AppStorageCustomDataReaderView.swift in Sources */,
+				F29ED25529D6D50200E3EBCC /* UserName.swift in Sources */,
+				F29ED25929D6D91A00E3EBCC /* UserStorage.swift in Sources */,
 				F2D026EA29D5CD1600640A47 /* SecondTabView.swift in Sources */,
 				F2D026E429D5C13F00640A47 /* FirstExamplesView.swift in Sources */,
 				F2DE36E229D5F43200920935 /* ThirdExampleView.swift in Sources */,

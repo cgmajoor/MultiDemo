@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct FourthExampleView: View {
+    @StateObject var userStorage = UserStorage()
 
     var body: some View {
         TabView {
@@ -26,7 +27,17 @@ struct FourthExampleView: View {
                     Image(systemName: "square.fill")
                     Text("AppStorageReader")
                 }
-        }
+            AppStorageCustomDataView()
+                .tabItem {
+                    Image(systemName: "square.fill")
+                    Text("CustomData")
+                }
+            AppStorageCustomDataReaderView()
+                .tabItem {
+                    Image(systemName: "square.fill")
+                    Text("CustomData")
+                }
+        }.environmentObject(userStorage)
     }
 }
 
