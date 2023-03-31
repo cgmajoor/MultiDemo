@@ -9,17 +9,17 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        TabView {
-            FirstTabView()
-                .tabItem {
-                    Image(systemName: "01.circle")
-                    Text("First")
-                }
-            SecondTabView()
-                .tabItem {
-                    Image(systemName: "02.circle")
-                    Text("Second")
-                }
+        NavigationStack() {
+
+            NavigationLink(destination: { FirstExamplesView() }, label: { Text("Example 1") })
+                .padding()
+            NavigationLink(destination: { SecondExampleView() }, label: { Text("Example 2") })
+                .padding()
+            NavigationLink(destination: { ThirdExampleView() }, label: { Text("Example 3") })
+                .padding()
+            NavigationLink(destination: { FourthExampleView() }, label: { Text("Example 4") })
+                .padding()
+                .navigationTitle("SwiftUI Demos")
         }
     }
 }

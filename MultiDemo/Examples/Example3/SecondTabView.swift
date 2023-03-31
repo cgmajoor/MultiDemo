@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SecondTabView: View {
-    @State private var text: String = ""
+    @State private var text: String = "Enter some text here"
 
     var body: some View {
         TextEditor(text: $text)
